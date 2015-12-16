@@ -1,0 +1,228 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 18, 2015, 2:44:15 PM
+    Author     : wgichuhi
+        Modified by : dmuthami
+        Date Modified		: December 12, 2015, 1721 hrs EAT
+*/
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#FFF;
+    overflow:hidden;
+    font-family:Kimberley, sans-serif;
+}
+
+#header {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    padding-top:4px;
+    padding-right:15px;
+    background-color:#929761;
+    color:#421b14;
+    font-size:16pt;
+    text-align:right;
+    font-weight:700;
+    border:solid 2px #79663b;
+    height:55px;
+    margin:2px;
+}
+
+#subtitle {
+    font-size:small;
+    color:#cfcfcf;
+    text-align:right;
+    padding-right:20px;
+}
+
+#footer {
+    background-color:#FFF;
+    color:#2a3537;
+    border:solid 2px #79663b;
+    font-size:10pt;
+    text-align:center;
+    height:30px;
+    margin:2px;
+    padding:2px;
+}
+
+#rightPane {
+    background-color:#FFF;
+    color:#421b14;
+    border:solid 2px #79663b;
+    width:20%;
+    margin:3px;
+    padding:10px;
+}
+
+#leftPane {
+    width:150px;
+    color:#3C1700;
+    background-color:#FFF;
+    border:solid 2px #79663b;
+    margin:3px;
+    padding:5px;
+}
+
+#map {
+    border:solid 4px #79663b;
+    margin:5px;
+}
+
+.shadow {
+    -o-border-radius:6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    box-shadow:8px 8px 16px #323834;
+    -webkit-box-shadow:8px 8px 16px #323834;
+    -moz-box-shadow:8px 8px 16px #323834;
+    -o-box-shadow:8px 8px 16px #323834;
+}
+
+.nihilo .dijitAccordionText {
+    margin-left:4px;
+    margin-right:4px;
+    color:#5c8503;
+}
+
+#HomeButton {
+    position: absolute;
+    top: 92px;
+    left: 26px;
+    z-index: 50;
+}
+
+#LocateButton {
+    position: absolute;
+    top: 131px;
+    left: 26px;
+    z-index: 50;
+}
+
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 60px;
+}
+
+#parcelFeatureTable{
+    height:23%;  
+}
+
+/* Change color of icons to match bar chart and selection symbol */
+.esriPopup.dark div.titleButton, 
+.esriPopup.dark div.titlePane .title,
+.esriPopup.dark div.actionsPane .action {
+    color: #A4CE67;
+}
+
+/* Additional customizations */
+.esriPopup.dark .esriPopupWrapper {
+    border: none;
+}
+
+.esriPopup .contentPane {
+    text-align: center;
+}
+
+.esriViewPopup .gallery {
+    margin: 0 auto;
+}
+
+.esriPrintout {
+    color: #fff !important;
+    background: #749a02;
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #888;
+    border-radius: 5px;
+    border: 1px solid #8AC007;
+    animation: glowIt 2s infinite;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    -webkit-border-radius: 5px;
+    -webkit-animation: glowIt 2s infinite;
+}
+
+/* Standard syntax */
+@keyframes glowIt {
+    0% {
+        background-color: #749a02;
+        box-shadow: 0 0 5px #888;
+    }
+    50% {
+        background-color: #91bd09;
+        box-shadow: 0 0 15px #91bd09;
+    }
+    100% {
+        background-color: #749a02;
+        box-shadow: 0 0 5px #888;
+    }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes glowIt {
+    0% {
+        background-color: #749a02;
+        -webkit-box-shadow: 0 0 5px #888;
+    }
+    50% {
+        background-color: #91bd09;
+        -webkit-box-shadow: 0 0 15px #91bd09;
+    }
+    100% {
+        background-color: #749a02;
+        -webkit-box-shadow: 0 0 5px #888;
+    }
+}
+
+/*Print Component CSS */
+
+#feedback {
+    background: #fff;
+    color: #000;
+    position: relative;
+    font-family: arial;
+    height: auto;
+    right: 20px;
+    margin: 5px;
+    padding: 10px;
+    top: 20px;
+    width: 120px;
+    z-index: 40;
+}
+
+#feedback a {
+    border-bottom: 1px solid #888;
+    color: #444;
+    text-decoration: none;
+}
+
+#feedback a:hover, #feedback a:active, #feedback a:visited {
+    border: none;
+    color: #444;
+    text-decoration: none;
+}
+h3 {
+    margin: 0 0 5px 0;
+    border-bottom: 1px solid #444;
+    padding: 0 0 5px 0;
+    text-align: center;
+}
+
+#info {
+    padding: 2px 0 0 0;
+}

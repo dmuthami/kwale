@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 18, 2015, 2:44:15 PM
+    Author     : wgichuhi
+	Modified by : dmuthami
+	Date		: October 30, 2015, 2212 hrs EAT
+*/
+
+#HomeButton {
+    position: absolute;
+    top: 92px;
+    left: 26px;
+    z-index: 50;
+}
+
+#LocateButton {
+    position: absolute;
+    top: 131px;
+    left: 26px;
+    z-index: 50;
+}
+
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 60px;
+}
+
+#parcelFeatureTable{
+    height:23%;  
+}
+

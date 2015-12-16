@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <!--The viewport meta tag is used to improve the presentation and behavior of the samples on iOS devices-->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+        <meta name="description" content="Kwale County Revenue Map"/>
+        <meta name="author" content="Techno Brain Ltd."/>
+
+        <!-- Title-->        
+        <title>Kwale County Revenue Map</title>
+
+        <!--External page scripting-->
+        <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+        <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/nihilo/nihilo.css">
+        <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+        <!--Custom layout styling-->
+        <link rel="stylesheet" href="assets/css/layout.css">     
+        <script>
+
+            var dojoConfig = {
+                parseOnLoad: false,
+                packages: [{
+                        "name": "assets",
+                        "location": location.pathname.replace(/\/[^/]+$/, "") + "/assets"
+                    }
+                ],
+                paths: {
+                    //if you want to host on your own server, download and put in folders then use path like:
+                    agsjs: location.pathname.replace(/\/[^/]+$/, '') + '/src/agsjs'
+                }
+            };
+        </script>
+        <script>
+            require([
+                "dojo/parser",
+                "dijit/layout/BorderContainer",
+                "dijit/layout/ContentPane"]);
+        </script>
+        <script src="http://js.arcgis.com/3.14/"></script>
+        <!--Load Main Script-->
+        <script src="assets/js/Main.js" type="text/javascript"></script>
+    </head>
+    <body class="nihilo">
+        <div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'"
+             style="width:100%; height:100%;">
+
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left'" id="leftPane">
+                <div data-dojo-type="dijit/layout/AccordionContainer">
+                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Basemaps'">
+                        <div id="basemapGallery"></div>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Measurement'">
+                        <!--
+                            <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+                                   <span id="measureSpan">Press <b>CTRL</b> to enable snapping.</span>
+                                   <div id="measureDiv"></div>						 
+                            </div>
+                        -->
+                        <p>
+                            Content for pane 2
+                        </p>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Layers'">
+                        <!--Layers Tab-->
+                        <div data-dojo-type="dijit/layout/AccordionPane"
+                             data-dojo-props="title:'Layers', selected:true">
+                            <div id="tocDiv"></div>
+                        </div>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Legend'">
+                        <!--Legend Tab-->
+                        <div data-dojo-type="dijit/layout/AccordionPane" id="legendPane"
+                             data-dojo-props="title:'Legend'">
+                            <div id="legendDiv"></div>
+                        </div>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane" id="printPane"
+                         data-dojo-props="title:'Print'">
+                        <!--Print Tab-->
+                        <div id="feedback" class="shadow">
+                            <h3>
+                                KCG Print Templates <br>
+                                Created by the Mapping Division
+                            </h3>
+                            <div id="info">
+                                <!-- that will be used for the print dijit -->
+                                <div id="print_button"></div>
+                            </div>
+                        </div>
+                    </div>					
+                </div>
+            </div>
+            <div id="map" class="shadow" 
+                 data-dojo-type="dijit/layout/ContentPane" 
+                 data-dojo-props="region:'center'"
+                 style="overflow:hidden;">
+                <div id="bingLogo" style="position: absolute;bottom: 2px;left: 3px;display:none;z-index:49;">
+                    <img src="assets/images/bing_logo.png" border="0" />
+                </div>
+
+                <!-- Position home button -->
+                <div id="HomeButton"></div>
+
+                <!-- Position locate button -->
+                <div id="LocateButton"></div>
+
+                <!-- Position search toolbar -->
+                <div id="search"></div>
+
+                <!-- Measurement Div -->
+                <div style="position:absolute; right:20px; top:10px; z-Index:999;">
+                    <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+                        <div id="measureDiv"></div>
+                        <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Position FeatureTable -->
+            <div id="parcelFeatureTable" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom', splitter:true" >
+                <div id="parcelTableNode"></div>
+            </div>
+        </div>
+    </body>
+</html>
